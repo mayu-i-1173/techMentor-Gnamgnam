@@ -1,0 +1,374 @@
+@charset "UTF-8";
+/*******************************
+Webサイト全体の指定
+*******************************/
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*******************************
+変数の指定
+*******************************/
+/*******************************
+共通パーツの指定
+*******************************/
+.u-container {
+  max-width: 1000px;
+  padding: 80px 40px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .u-container {
+    max-width: 390px;
+    padding: 80px 30px;
+  }
+}
+
+.section-title {
+  color: #83776a;
+  margin-bottom: 60px;
+}
+.section-title .section-title-en {
+  display: block;
+  font-size: 32px;
+  font-family: "Noto Serif JP";
+}
+.section-title .section-title-ja {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  position: relative;
+  padding-left: 45px;
+}
+.section-title .section-title-ja::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 1px;
+  background-color: #83776a;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+}
+
+.readMore-btn {
+  padding: 15px 45px;
+  border: 1px solid #83776a;
+  text-decoration: none;
+  color: #83776a;
+  position: relative;
+  background-color: #fff;
+}
+.readMore-btn::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 70px;
+  height: 1px;
+  background-color: #83776a;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -35px;
+  transition: 0.2s;
+}
+.readMore-btn:hover {
+  background-color: #83776a;
+  color: #fff;
+}
+.readMore-btn:hover::after {
+  right: -45px;
+}
+
+/*******************************
+ヘッダー
+*******************************/
+.header {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.header .header-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .header .header-inner {
+    padding: 16px 20px;
+  }
+}
+.header .header-ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .header .header-ul {
+    gap: 24px;
+  }
+}
+.header .header-ul .header-li .header-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(131, 119, 106);
+}
+.header .header-ul .header-li .header-link:hover {
+  opacity: 0.5;
+}
+
+/*******************************
+firstView
+*******************************/
+.firstView {
+  padding: 300px 0;
+  margin-left: 280px;
+  background-image: url(../image/fv.png);
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .firstView {
+    margin: 0;
+  }
+}
+.firstView .firstView-title {
+  border: 1px solid #83776a;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  position: absolute;
+  left: -140px;
+  bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: "Noto Serif JP";
+  font-weight: bold;
+  color: #83776a;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 768px) {
+  .firstView .firstView-title {
+    width: 200px;
+    height: 200px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    font-size: 20px;
+  }
+}
+
+/*******************************
+コンセプト
+*******************************/
+.concept-inner {
+  display: flex;
+  gap: 60px;
+}
+@media screen and (max-width: 768px) {
+  .concept-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.concept-desc .concept-text {
+  margin-bottom: 45px;
+}
+
+@media screen and (max-width: 768px) {
+  .concept-btn {
+    text-align: center;
+  }
+}
+
+/*******************************
+メニュー
+*******************************/
+.menu {
+  background-color: #f9f5ed;
+}
+
+.menu-ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .menu-ul {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
+.menu-ul .menu-li {
+  position: relative;
+}
+.menu-ul .menu-li .image-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 28px;
+  color: #83776a;
+  margin: 0;
+  padding: 10px;
+}
+.menu-ul .menu-li .menu-title {
+  margin: 10px 0 0 0;
+}
+.menu-ul .menu-li .menu-price {
+  margin: 0;
+  color: #83776a;
+}
+.menu-ul .menu-li:nth-child(2) {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .menu-ul .menu-li:nth-child(2) {
+    margin-top: 0;
+  }
+}
+.menu-ul .menu-li:nth-child(3) {
+  margin-top: 80px;
+}
+@media screen and (max-width: 768px) {
+  .menu-ul .menu-li:nth-child(3) {
+    margin-top: 0;
+  }
+}
+
+.menu-btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.fixedBg {
+  height: 500px;
+  background-image: url(../image/fixed_bg.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 768px) {
+  .fixedBg {
+    height: 350px;
+    background-attachment: scroll;
+  }
+}
+
+/*******************************
+店舗情報
+*******************************/
+.shop-inner {
+  display: flex;
+  gap: 60px;
+}
+@media screen and (max-width: 768px) {
+  .shop-inner {
+    flex-direction: column;
+  }
+}
+
+.shop-title {
+  color: #83776a;
+  margin: 0;
+}
+
+.shop-dl {
+  margin: 0;
+}
+
+.shop-dl-inner {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ccc;
+}
+.shop-dl-inner .shop-dt {
+  width: 70px;
+}
+
+/*******************************
+フッター
+*******************************/
+.footer {
+  background-color: #f9f5ed;
+}
+
+.footer-inner {
+  padding: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .footer-inner {
+    padding: 40px 20px;
+  }
+}
+.footer-inner .footer-img {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.footer-ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .footer-ul {
+    gap: 16px;
+    padding: 0;
+  }
+}
+.footer-ul .footer-li .footer-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(131, 119, 106);
+  font-family: "Noto Serif JP";
+  transition: 0.2s;
+}
+.footer-ul .footer-li .footer-link:hover {
+  opacity: 0.5;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #83776a;
+}
+
+.fixed-btn {
+  display: inline-block;
+  position: fixed;
+  bottom: 65px;
+  right: 0;
+  z-index: 90;
+}
+/*# sourceMappingURL=style.css.map */
