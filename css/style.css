@@ -121,6 +121,7 @@ img {
   display: flex;
   list-style: none;
   gap: 40px;
+  font-family: "Noto Serif JP";
 }
 @media screen and (max-width: 768px) {
   .header .header-ul {
